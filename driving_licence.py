@@ -1,10 +1,17 @@
-# driving_licence.py
 import sys
 
-name = sys.argv[1]
-theory = float(sys.argv[2])
-practical = float(sys.argv[3])
-rules = float(sys.argv[4])
+# Check if arguments are provided
+if len(sys.argv) == 5:
+    name = sys.argv[1]
+    theory = float(sys.argv[2])
+    practical = float(sys.argv[3])
+    rules = float(sys.argv[4])
+else:
+    print("No command-line arguments provided, using default test data.")
+    name = "Test Applicant"
+    theory = 90
+    practical = 85
+    rules = 80
 
 avg = (theory + practical + rules) / 3
 
