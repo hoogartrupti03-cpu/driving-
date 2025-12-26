@@ -3,7 +3,6 @@ import sys
 # Ensure exactly 4 arguments are provided
 if len(sys.argv) != 5:
     print("Usage: python driving_licence.py <Name> <Theory> <Practical> <Rules>")
-    print("Example: python driving_licence.py John 95 92 93")
     sys.exit(1)  # Exit with error code
 
 # Get command-line arguments
