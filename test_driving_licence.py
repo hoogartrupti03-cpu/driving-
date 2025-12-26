@@ -1,5 +1,5 @@
 # test_driving_licence.py
-from driving_licence_app import driving_report
+from driving_licence import driving_report
 
 def test_driving_report():
     expected_output = (
