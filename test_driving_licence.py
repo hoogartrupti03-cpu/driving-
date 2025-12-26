@@ -9,10 +9,18 @@ def test_default_report():
     )
     assert driving_report() == expected_output
 
-def test_custom_report():
+def test_safe_driver():
     expected_output = (
         "Applicant: Alice\n"
-        "Average Score: 90.00\n"
+        "Average Score: 85.00\n"
+        "Evaluation: Safe Driver"
+    )
+    assert driving_report("Alice", 90, 80, 85) == expected_output
+
+def test_excellent_driver():
+    expected_output = (
+        "Applicant: Bob\n"
+        "Average Score: 95.00\n"
         "Evaluation: Excellent Driver"
     )
-    assert driving_report("Alice", 95, 90, 85) == expected_output
+    assert driving_report("Bob", 95, 97, 93) == expected_output
