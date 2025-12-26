@@ -1,7 +1,10 @@
-name = input("Applicant name: ")
-theory = float(input("Theory Test: "))
-practical = float(input("Practical Test: "))
-rules = float(input("Traffic Rules: "))
+# driving_licence.py
+import sys
+
+name = sys.argv[1]
+theory = float(sys.argv[2])
+practical = float(sys.argv[3])
+rules = float(sys.argv[4])
 
 avg = (theory + practical + rules) / 3
 
@@ -18,4 +21,6 @@ elif avg >= 40:
 else:
     result = "Fail"
 
-print("License Result:", result)
+print(f"Applicant: {name}")
+print(f"Average Score: {avg}")
+print(f"Evaluation: {result}")
