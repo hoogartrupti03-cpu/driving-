@@ -24,4 +24,27 @@ else:
     name = default_name
     theory = default_theory
     practical = default_practical
-    rule
+    rules = default_rules
+
+# --- Step 3: Calculate average ---
+avg = (theory + practical + rules) / 3
+
+# --- Step 4: Determine evaluation ---
+if avg >= 90:
+    result = "Excellent Driver"
+elif avg >= 80:
+    result = "Safe Driver"
+elif avg >= 65:
+    result = "Qualified Driver"
+elif avg >= 50:
+    result = "Conditional Pass"
+elif avg >= 40:
+    result = "Re-Test Required"
+else:
+    result = "Fail"
+
+# --- Step 5: Print results ---
+print("--- Driving License Evaluation ---")
+print(f"Applicant: {name}")
+print(f"Average Score: {avg:.2f}")
+print(f"Evaluation: {result}")
